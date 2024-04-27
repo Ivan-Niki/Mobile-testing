@@ -70,5 +70,14 @@ Packagename начинается на "com." или "group." (например: 
 
 11) adb logcat -b crash - сбор логов краша из буфера данных.
 
-12) adb logcat -b crash > /Documents/file_log.txt - сохранение логов в файл.
+12) adb logcat -b crash > /Documents/file_log.txt - сохранение логов в файл. (Сохранять можно в формате .log или .txt).
+
+
+--------- Фильтрация логов по паттерну c grep ---------
+
+13) adb logcat | grep name - фильтрация по одному паттерну.
+
+13.1) adb logcat -b crash | grep name > path/file.txt - фильтрация по одному паттерну (с выводом результатов в отдельный файл).
+
+14) adb logcat | grep -E (name1|name2) - фильтрация по двум паттернам.
 
