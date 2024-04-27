@@ -36,7 +36,15 @@ Android Debug Bridge не имеет собственного интерфейс
 консоли запрос выглядит как «./adb.exe» (или «.\adb.exe»).
 
 
+--------- Обращение к девайсам через ADB ---------
+Если подключено два девайса или девайс и эмулятор, то надо каждый раз идентифицировать, к кому обращаемся:
+adb -d    - к девайсу (подключенному по USB)
+adb -e    - к эмулятору
+
+
+
 ============== Команды ADB ==============
+
 1) adb devices – вывод списка подключенных устройств;
 
 2) adb reboot – перезагрузка устройства;
@@ -45,7 +53,7 @@ Android Debug Bridge не имеет собственного интерфейс
 Например: 
 D:\Ksendzov_QA-course\36-QA\Mobile-testing\Android\todo.apk
 
-4) adb install -r path/to/app.apk – обновление приложения во внутреннюю память;
+4) adb install -r path/to/app.apk – обновление приложения;
 
 Чтобы ДЕинсталлировать приложение через ADB, нам нужно узнать его идентификатор (packagename). 
 Packagename начинается на "com." или "group." (например: com.android.todolist);
@@ -67,13 +75,13 @@ Packagename начинается на "com." или "group." (например: 
 9.1) adb logcat -v color - раскрашивает логи по цветам в зависимости от приоритета.
 
 ------- Приоритеты логов --------
-V - Verbouse (lowest priority)
-D - Debug
-I - Info
-W - Warning
-E - Error
-F - Fatal
-S - Silent (highest priority)
+	V - Verbose (lowest priority)
+	D - Debug
+	I - Info
+	W - Warning
+	E - Error
+	F - Fatal
+	S - Silent (highest priority)
 
 
 10) adb logcat -с - очистить буфер логов.
