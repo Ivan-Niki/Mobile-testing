@@ -66,6 +66,16 @@ Packagename начинается на "com." или "group." (например: 
 
 9.1) adb logcat -v color - раскрашивает логи по цветам в зависимости от приоритета.
 
+------- Приоритеты логов --------
+V - Verbouse (lowest priority)
+D - Debug
+I - Info
+W - Warning
+E - Error
+F - Fatal
+S - Silent (highest priority)
+
+
 10) adb logcat -с - очистить буфер логов.
 
 11) adb logcat -b crash - сбор логов краша из буфера данных.
@@ -79,5 +89,5 @@ Packagename начинается на "com." или "group." (например: 
 
 13.1) adb logcat -b crash | grep name > path/file.txt - фильтрация по одному паттерну (с выводом результатов в отдельный файл).
 
-14) adb logcat | grep -E (name1|name2) - фильтрация по двум паттернам.
+14) adb logcat | grep -E '(name1|name2)' - фильтрация по двум паттернам.
 
