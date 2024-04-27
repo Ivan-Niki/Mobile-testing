@@ -36,6 +36,29 @@ Android Debug Bridge не имеет собственного интерфейс
 консоли запрос выглядит как «./adb.exe» (или «.\adb.exe»).
 
 
+============== Команды ADB ==============
+1) adb devices – вывод списка подключенных устройств;
+
+2) adb reboot – перезагрузка устройства;
+
+3) adb install path/to/app.apk – установка приложения;
+Например: 
+D:\Ksendzov_QA-course\36-QA\Mobile-testing\Android\todo.apk
+
+4) adb install -r path/to/app.apk – обновление приложения во внутреннюю память;
+
+Чтобы ДЕинсталлировать приложение через ADB, нам нужно узнать его идентификатор (packagename). 
+Packagename начинается на "com." или "group." (например: com.android.todolist);
+
+5) adb shell pm list packages – вывод списка установленных приложений;
+
+6) adb shell pm list packages | grep todo – вывод списка установленных приложений, содержащих подстроку todo;
+
+7) adb shell pm list packages -f todo – вывод списка установленных приложений, содержащих подстроку todo (помимо packagename будет выведен путь, по которому лежит приложение);
+
+8) adb uninstall com.app.example – удаление приложения;
+
+
 
 
 
