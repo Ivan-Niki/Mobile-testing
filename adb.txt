@@ -51,7 +51,7 @@ adb -e    - к эмулятору
 
 3) adb install path/to/app.apk – установка приложения;
 Например: 
-D:\Ksendzov_QA-course\36-QA\Mobile-testing\Android\todo.apk
+-> adb install D:\Mobile-testing\Android\todo.apk
 
 4) adb install -r path/to/app.apk – обновление приложения;
 
