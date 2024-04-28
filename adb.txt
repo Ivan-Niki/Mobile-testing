@@ -95,11 +95,16 @@ Packagename начинается на "com." или "group." (например: 
 
 --------- Фильтрация логов по паттерну c grep (findsrt) ---------
 
+Посмотреть информацию по доступным опциям команды logcat:
+->  logcat --help
+
 13) adb logcat | grep name - фильтрация по одному паттерну.
 
 13.1) adb logcat -b crash | grep name > path/file.txt - фильтрация по одному паттерну (с выводом результатов в отдельный файл).
 
 14) adb logcat | grep -E '(name1|name2)' - фильтрация по двум паттернам.
+
+
 
 
 
@@ -114,3 +119,10 @@ V — Verbose, D — Debug, I — Info, W — Warning, E — Error, F — Fatal,
 
 15) adb logcat *:E
 
+
+----------- Создание скриншота ----------
+
+16) adb shell screencap /storage/emulated/0/DCIM/screen1.png
+
+После этого картинку нужно выдернуть из устройства командой adb pull:
+17) adb pull /sdcard/screen.png
